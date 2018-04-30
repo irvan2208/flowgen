@@ -245,7 +245,7 @@
 		  success: function (result) {
 		  	console.log(result);
 		  	$('#SaveButton').html('Save');
-		  	// window.location.href = "flowchart.php?id="+result;
+		  	window.location.href = "flowchart.php?id="+result;
 		  }
 		});
 	  	myDiagram.isModified = false;
