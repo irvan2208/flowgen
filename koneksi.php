@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "flowchart_generator";
+$username = "irvansan_flowchart_generator";
+$password = "flowchart_generator";
+$dbname = "irvansan_flowchart_generator";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
