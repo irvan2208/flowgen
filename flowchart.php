@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Flowchart Generator</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/1.8.17/go-debug.js"></script>
+	<script src="go.js"></script>
 	<script type="text/javascript" src="ResizeMultipleTool.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -20,7 +20,7 @@
 	          allowDrop: true,  // must be true to accept drops from the Palette
 	          "LinkDrawn": showLinkLabel,  // this DiagramEvent listener is defined below
 	          "LinkRelinked": showLinkLabel,
-	          scrollsPageOnFocus: false,
+	          // "scrollsPageOnFocus": false,
 	          "undoManager.isEnabled": true  // enable undo & redo
 	        });
 
@@ -212,7 +212,7 @@
 	    myPalette =
 	      $(go.Palette, "myPaletteDiv",  // must name or refer to the DIV HTML element
 	        {
-	          scrollsPageOnFocus: false,
+	          // scrollsPageOnFocus: false,
 	          nodeTemplateMap: myDiagram.nodeTemplateMap,  // share the templates used by myDiagram
 	          model: new go.GraphLinksModel([  // specify the contents of the Palette
 	            { category: "Start", text: "Start" },
