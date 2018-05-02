@@ -166,8 +166,8 @@
 	          corner: 5, toShortLength: 4,
 	          relinkableFrom: true,
 	          relinkableTo: true,
-	          reshapable: true,
-	          resegmentable: true,
+	          // reshapable: true,
+	          // resegmentable: true,
 	          // mouse-overs subtly highlight links:
 	          mouseEnter: function(e, link) { link.findObject("HIGHLIGHT").stroke = "rgba(30,144,255,0.2)"; },
 	          mouseLeave: function(e, link) { link.findObject("HIGHLIGHT").stroke = "transparent"; }
