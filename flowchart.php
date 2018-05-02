@@ -259,7 +259,7 @@
 	  // add an SVG rendering of the diagram at the end of this page
 	  function makeImage() {
 	    var img = myDiagram.makeImage({
-	        scale: 0.5
+	        size: new go.Size(1000,NaN)
 	      });
 	    img.style.border = "1px solid black";
 	    obj = document.getElementById("SVGArea");
