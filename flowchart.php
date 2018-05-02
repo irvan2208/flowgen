@@ -88,12 +88,12 @@
 	        // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
 	        $(go.Panel, "Auto",
 	          $(go.Shape, "Rectangle",
-	            { fill: "#00A9C9", stroke: null },
+	            { fill: "#fff", stroke: "#4d4d4d" },
 	            new go.Binding("figure", "figure")),
 	          $(go.TextBlock,
 	            {
 	              font: "bold 11pt Helvetica, Arial, sans-serif",
-	              stroke: lightText,
+	              stroke: "#4d4d4d",
 	              margin: 8,
 	              maxSize: new go.Size(1600, NaN),
 	              wrap: go.TextBlock.WrapFit,
@@ -112,9 +112,9 @@
 	      $(go.Node, "Spot", nodeStyle(), { resizable: true },
 	        $(go.Panel, "Auto",
 	          $(go.Shape, "Circle",
-	            { minSize: new go.Size(40, 40), fill: "#79C900", stroke: null }),
+	            { minSize: new go.Size(40, 40), fill: "#fff", stroke: "#4d4d4d" }),
 	          $(go.TextBlock, "Start",
-	            { font: "bold 11pt Helvetica, Arial, sans-serif", stroke: lightText },
+	            { font: "bold 11pt Helvetica, Arial, sans-serif", stroke: "#4d4d4d" },
 	            new go.Binding("text"))
 	        ),
 	        // three named ports, one on each side except the top, all output only:
@@ -127,9 +127,9 @@
 	      $(go.Node, "Spot", nodeStyle(), { resizable: true },
 	        $(go.Panel, "Auto",
 	          $(go.Shape, "Circle",
-	            { minSize: new go.Size(40, 40), fill: "#DC3C00", stroke: null }),
+	            { minSize: new go.Size(40, 40), fill: "#fff", stroke: "#4d4d4d" }),
 	          $(go.TextBlock, "End",
-	            { font: "bold 11pt Helvetica, Arial, sans-serif", stroke: lightText },
+	            { font: "bold 11pt Helvetica, Arial, sans-serif", stroke: "#4d4d4d" },
 	            new go.Binding("text"))
 	        ),
 	        // three named ports, one on each side except the bottom, all input only:
@@ -229,7 +229,8 @@
 	    var diagram = node.diagram;
 	    if (!diagram || diagram.isReadOnly || !diagram.allowLink) return;
 	    node.ports.each(function(port) {
-	        port.stroke = (show ? "white" : null);
+	        port.stroke = (show ? "#4d4d4d" : null);
+	        port.fill = (show ? "#4d4d4d" : null);
 	      });
 	  }
 
