@@ -280,21 +280,21 @@
 	}
     ?>
 	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="index.php">Back</a></li>
-      <li class="active"><input type="text" placeholder="Flowchart Name" class="form-control" name="projectName" id="projectName" value="<?php 
-			  		if (isset($_GET['id'])) { 
-			  			echo $flowchart['name'];
-			  		}else{
-			  			echo '';
-			  		}?>"></li>
-      <li><a class="btn btn-primary" id="SaveButton" onclick="save()" style="color:#fff;" onMouseOver="this.style.color='#000'" onclick="makeImage()">Save</a></li>
-      <li><a class="btn btn-success" style="color:#fff;" onMouseOver="this.style.color='#000'" onclick="makeImage()">Render as Image</a></li>
-    </ul>
-  </div>
-</nav>
-	<div class="container-fluid">
+	  <div class="container-fluid">
+	    <ul class="nav navbar-nav">
+	      <li class="active"><a href="index.php">Back</a></li>
+	      <li class="active"><input type="text" placeholder="Flowchart Name" class="form-control" name="projectName" id="projectName" value="<?php 
+				  		if (isset($_GET['id'])) { 
+				  			echo $flowchart['name'];
+				  		}else{
+				  			echo '';
+				  		}?>"></li>
+	      <li><a class="btn btn-primary" id="SaveButton" onclick="save()" style="color:#fff;" onMouseOver="this.style.color='#000'" onclick="makeImage()">Save</a></li>
+	      <li><a class="btn btn-success" style="color:#fff;" onMouseOver="this.style.color='#000'" onclick="makeImage()">Render as Image</a></li>
+	    </ul>
+	  </div>
+	</nav>
+	<div id="sample" class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
 				<div style="width: 100%; display: flex; justify-content: space-between">
@@ -303,7 +303,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="sample" class="row">
+		<div class="row">
 			<div class="col-md-12">
 			  <p>
 				  Mouse-over a Node to view its ports.
@@ -318,7 +318,11 @@
 			  		if (isset($_GET['id'])) { 
 			  			echo $flowchart['data'];
 			  		}else{
-			  			echo '{}';
+			  			echo '{ "class": "go.GraphLinksModel",
+  "linkFromPortIdProperty": "fromPort",
+  "linkToPortIdProperty": "toPort",
+  "nodeDataArray": [],
+  "linkDataArray": []}';
 			  		}?>
 			  </textarea>
 			  <div id="SVGArea"></div>
